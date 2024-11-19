@@ -104,14 +104,10 @@ export const updateProfile = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, bio, skills } = req.body;
         const file = req.file;
-        if (!fullname || !email || !phoneNumber || !password || !role) {
-            return res.status(400).json({
-                message: "Something is missing",
-                success: false
-            });
-
-        };
-        const skillsArray = skills.split(",");  //string is converted into array y spliting with ,.
+        let skillsArray;
+        if(skills){
+            const skillsArray = skills.split(",");  //string is converted into array y spliting with ,.
+        }
         const userId = req.id; //middleware authentication
         let user = await User.findById(userId);
 
@@ -122,11 +118,11 @@ export const updateProfile = async (req, res) => {
             })
         }
         // updating data
-        user.fullname = fullname,
-            user.email = email,
-            user.phoneNumber = phoneNumber,
-            user.profile.bio = bio,
-            user.profile.skills = skillsArray
+        if(fullname) user.fullname = fullname
+        if(email) user.email = email
+        if(phoneNumber) user.phoneNumber = phoneNumber
+        if(bio) user.bio = bio
+        if(skills) user.profile.skills = skillsArray
 
         await user.save();
 
