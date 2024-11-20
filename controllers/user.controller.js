@@ -2,7 +2,7 @@ import { User } from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-
+//register
 export const register = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, password, role } = req.body;
@@ -38,6 +38,7 @@ export const register = async (req, res) => {
     }
 }
 
+//login
 export const login = async (req, res) => {
     try {
         const { email, password, role } = req.body;
@@ -100,6 +101,7 @@ export const logout = async (req, res) => {
     }
 }
 
+//update
 export const updateProfile = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, bio, skills } = req.body;
