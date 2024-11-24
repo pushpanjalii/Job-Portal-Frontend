@@ -10,6 +10,7 @@ The **Job Portal Frontend** is a responsive and user-friendly web application th
 - **API Integration**: Axios / Fetch API
 - **Build Tool**: Vite / Webpack
 - **Version Control**: Git
+- **Deployment**: Vercel
 
 ## Features
 
