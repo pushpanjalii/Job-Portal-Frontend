@@ -1,6 +1,5 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
-import { Popover } from 'popover'
 
 const Navbar = () => {
     return (
@@ -15,20 +14,6 @@ const Navbar = () => {
                         <li>Jobs</li>
                         <li>Brower</li>
                     </ul>
-                    <Popover >
-                        <PopoverTrigger asChild>
-                            <Avatar>
-                                <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                                <AvatarFallback>CN</AvatarFallback>
-                            </Avatar>
-                        </PopoverTrigger>
-                        <PopoverContent>
-                            <Avatar>
-                                <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                                <AvatarFallback>CN</AvatarFallback>
-                            </Avatar>
-                        </PopoverContent>
-                    </Popover>
                 </div>
             </div>
         </div>
