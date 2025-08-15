@@ -1,3 +1,7 @@
+import  PopoverTrigger from '/src/assets/components/ui/popover.jsx';
+import PopoverContent from '/src/assets/components/ui/popover.jsx';
+import Popover from '/src/assets/components/ui/popover.jsx';
+import Avatar from '/src/assets/components/ui/avatar.jsx';
 import React from 'react'
 // import { Link } from 'react-router-dom'
 
@@ -14,6 +18,16 @@ const Navbar = () => {
                         <li>Jobs</li>
                         <li>Brower</li>
                     </ul>
+                    <Popover>
+                        <PopoverTrigger asChild>
+                            <Avatar>
+                                <img src="https://i.pravatar.cc/150?img=3" alt="User Avatar" />
+                            </Avatar>
+                        </PopoverTrigger>
+                        <PopoverContent>
+                             <h1>hello</h1>
+                        </PopoverContent>
+                    </Popover>
                 </div>
             </div>
         </div>
